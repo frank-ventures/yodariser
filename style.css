@@ -1,0 +1,53 @@
+:root {
+  --primary-green: #55693f;
+  --secondary-green: #81e869;
+}
+
+body {
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  min-height: 100dvh;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background-color: var(--primary-green);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--secondary-green);
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header img {
+  height: 50px;
+  border-radius: 0.75rem;
+  rotate: 25deg;
+}
+
+.form-section {
+  background-color: var(--primary-green);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  min-height: 7.5rem;
+  max-width: 25%;
+
+  border: 3px solid var(--secondary-green);
+}
+
+#result {
+  color: var(--secondary-green);
+  font-style: italic;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}

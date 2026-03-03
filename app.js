@@ -6,7 +6,7 @@ const resultP = document.getElementById("result");
 function handleSubmit(event) {
   event.preventDefault();
   const userInput = event.target.userInput.value;
-  resultP.innerText = yodarise(userInput);
+  resultP.innerText = '"' + yodarise(userInput) + '"';
 }
 
 function yodarise(inputText) {
@@ -17,5 +17,10 @@ function yodarise(inputText) {
   const firstPart = splitInput.slice(twentyPercent);
   const secondPart = splitInput.slice(0, twentyPercent);
 
-  return firstPart.concat(secondPart).join(" ");
+  return (
+    firstPart.join(" ").charAt(0).toUpperCase() +
+    firstPart.join(" ").slice(1) +
+    ", " +
+    secondPart.join(" ")
+  );
 }
